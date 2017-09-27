@@ -26,7 +26,6 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     params[:blog][:user_id] = current_user.id
-    binding.pry
     @blog = Blog.new(blog_params)
 
     respond_to do |format|
