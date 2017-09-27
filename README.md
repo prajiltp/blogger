@@ -8,6 +8,7 @@ This README documents necessary steps to get blogger up and running.
 === System dependencies
   * PostgreSQL 9.4.9 or above
 
+
 === Database setup
   * Edit database.yml file and set username and password correctly
   * rake db:setup
@@ -26,14 +27,15 @@ This README documents necessary steps to get blogger up and running.
 
 === Features to be added
 
-  * User profie edition and setting profile image
+  * User profile edition and setting profile image
   * Improve the style of site
-  * Share a blog to the user via mail
+  * Share a blog to a user via email
   * Social media sign up and sign in
   * Create two column 3 column and single column layouts.
+  * Add multiple layouts and show a demo on hover.
   * Like a blog or dislike.
   * Give star rating to a blog
   * Like a comment dislike a comment
   * Add category to a blog.
-  * Filter by category most readed, most rated etc.
-
+  * Filter by category, most read, most rated etc.
+  * apply Pagination
