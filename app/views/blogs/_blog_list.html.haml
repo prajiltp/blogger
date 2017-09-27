@@ -1,0 +1,19 @@
+
+%h1 Listing blogs
+
+.container.pl-50.pr-50
+  .row
+    - @blogs.each do |blog|
+      .col-12.col-sm-6.col-md-3
+        .card.text-center.w-90.mb-3
+          .card-header
+            =blog.title
+          .card-block
+            %h8.text-center
+              = blog.author.email
+            .btn-group.btn-group-sm{"aria-label" => "Actions", :role => "group"}
+              = link_to 'Show', blog
+              - if current_user && current_user.can_edit_or_delete?(blog)
+                = link_to 'Edit', edit_blog_path(blog)
+
+                = link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }

@@ -6,5 +6,17 @@
       - if @blog.title.present?
         %h2.title.text-center
           = @blog.title
+        %h6.text-center
+          = @blog.author.email
       .col-sm-8.col-sm-offset-2.text-justify
         = raw(@blog.description)
+  %h2
+    Comments
+    #com
+      = render @blog.messages
+  - if current_user
+    %h2
+      = render "messages/form"
+  - else
+    %h2
+      Sign in, to post comment

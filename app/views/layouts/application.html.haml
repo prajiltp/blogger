@@ -9,8 +9,7 @@
   %body
     #wrapper
       %nav.navbar.navbar-default.navbar-cls-top{:role => "navigation", :style => "margin-bottom: 0"}
-        .navbar-header
-          / %a.navbar-brand{href: "#{root_path}/" }
+        = link_to 'home screen', root_path
 
         .top-info
           - if current_user

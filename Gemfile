@@ -32,15 +32,23 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+# User registration and login
 gem 'devise'
 
+# template used
 gem 'haml-rails'
 gem 'jquery-rails'
+
+# styling
 gem 'bootstrap'
+
+# File attachment
 gem 'paperclip'
+
+# authenticate user on actions
 gem 'pundit'
 
+# rich text editor
 gem 'ckeditor'
 
 group :development, :test do
@@ -59,7 +67,22 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry'
+
+  # to identify n+1 queries
   gem 'bullet'
+
+  gem "guard-minitest", :require => false
+end
+
+group :test do
+  gem "connection_pool"
+  gem "launchy"
+  gem "minitest-reporters"
+  gem "mocha"
+  gem "poltergeist"
+  gem "shoulda-context"
+  gem "shoulda-matchers", ">= 3.0.1"
+  gem "test_after_commit"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,6 +1,6 @@
 class BlogPolicy < ApplicationPolicy
   def edit?
-  	record.author != @user
+  	record.author == @user
   end
 
   def delete?

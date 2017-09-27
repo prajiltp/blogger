@@ -1,20 +1,4 @@
-%h1 Listing blogs
-
-.container.pl-50.pr-50
-  .row
-    - @blogs.each do |blog|
-      .col-12.col-sm-6.col-md-3
-        .card.text-center.w-90.mb-3
-          .card-header
-            =blog.title
-          .card-block
-            .btn-group.btn-group-sm{"aria-label" => "Actions", :role => "group"}
-              = link_to 'Show', blog
-              - if current_user.can_edit_or_delete?(blog)
-                = link_to 'Edit', edit_blog_path(blog)
-
-                = link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Blog', new_blog_path
+= render 'blog_list'
+-if current_user
+  %br
+    = link_to 'New Blog', new_blog_path

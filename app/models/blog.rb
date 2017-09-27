@@ -1,5 +1,7 @@
 class Blog < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'user_id'
+  has_many :messages
+
   has_attached_file :header_image, :styles => {:thumb => ['50x50#', :png], :original => ['1440x650#', :jpeg]},
     :default_style => :original
 

@@ -224,7 +224,7 @@
 
     .navbar-cls-top .navbar-brand {
     	color: #fff;
-    	background: #0392ad;
+    	background: #03ad99;
     	width: 260px;
     	text-align: center;
     	height: 60px;
@@ -324,7 +324,7 @@
 
     }
     .navbar-cls-top {
-    	background:#AD033B;
+    	background:#03ad99;
     	border-bottom:none;
     	min-height:70px;
     	box-shadow:0 2px 5px 2px rgba(0,0,0,0.20);
@@ -333,7 +333,7 @@
     }
     .navbar-cls-top .navbar-brand:hover {
 
-    	background: #AD033B;
+    	background: #03ad99;
     	color:#fff;
 
     }
