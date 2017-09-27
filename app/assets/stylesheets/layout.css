@@ -579,3 +579,17 @@
 .indent-left {
     text-indent: 2em;
 }
+
+.home-wrapper {
+    display: block;
+    position: relative;
+    min-height: 200px;
+    height: 650px;
+    width: 100%;
+}
+.home-wrapper.home {
+    /*height: 750px;*/
+}
+.home-wrapper.open{
+    margin-top: 300px;
+}

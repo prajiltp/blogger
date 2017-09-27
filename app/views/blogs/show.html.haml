@@ -1,6 +1,10 @@
-%p#notice= notice
-
-
-= link_to 'Edit', edit_blog_path(@blog)
-\|
-= link_to 'Back', blogs_path
+.internal-container
+  -if @blog.header_image.present?
+    .home-wrapper.main-image{:style => "background: url('#{@blog.header_image}') center/cover no-repeat"}
+  .row.kz-row.two-column
+    .container.kz-container
+      - if @blog.title.present?
+        %h2.title.text-center
+          = @blog.title
+      .col-sm-8.col-sm-offset-2.text-justify
+        = raw(@blog.description)

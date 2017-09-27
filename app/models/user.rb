@@ -10,4 +10,8 @@ class User < ApplicationRecord
   validates :email, format: { with: VALID_EMAIL_REGEX }
 
   has_many :blogs
+
+  def can_edit_or_delete?(blog)
+  	blogs.include?(blog)
+  end
 end
