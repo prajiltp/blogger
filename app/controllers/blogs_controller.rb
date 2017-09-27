@@ -72,7 +72,7 @@ class BlogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
       params.require(:blog).permit(:description, :header_image,
-        :header_image_file_name, :user_id, :title)
+        :header_image_file_name, :user_id, :title, :delete_header_image)
     end
 
     def authorize_blog

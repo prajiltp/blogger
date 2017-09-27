@@ -10,7 +10,9 @@
     =f.text_field :title, class: 'form-control'
     %br= f.label 'Header Image file(optional)'
     = f.file_field :header_image
-    %br= image_tag @blog.header_image(:thumb) if @blog.header_image.present?
+    -if @blog.header_image.present?
+      %br= image_tag @blog.header_image(:thumb)
+      =render 'layouts/remove_attachment', name: :header_image, f: f
     %br=f.label :body
     = f.cktext_area :description, ckeditor: { language: 'en'}
     .actions
