@@ -1,0 +1,17 @@
+.custom_page
+  = form_for @blog do |f|
+    - if @blog.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@blog.errors.count, "error")} prohibited this blog from being saved:"
+        %ul
+          - @blog.errors.full_messages.each do |message|
+            %li= message
+    %br=f.label 'title'
+    =f.text_field :title, class: 'form-control'
+    %br= f.label 'Header Image file(optional)'
+    = f.file_field :header_image
+    %br= image_tag @blog.header_image(:thumb) if @blog.header_image.present?
+    %br=f.label :body
+    = f.cktext_area :description, ckeditor: { language: 'en'}
+    .actions
+      = f.submit 'Save'

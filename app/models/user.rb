@@ -8,4 +8,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :email, format: { with: VALID_EMAIL_REGEX }
+
+  has_many :blogs
 end
